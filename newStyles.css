@@ -1,0 +1,429 @@
+@import url("./variables.css");
+
+
+
+/* General formatting */
+html {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: var(--color-bg-base);   */
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  font-family: var(--font-family), sans-serif;
+
+  background: linear-gradient(90deg, var(--color-bg-darkererer) 0%, var(--color-bg-darkerer) 75%);
+}
+
+/* https://codepen.io/stephaniewalter/pen/xxVgReM
+https://codepen.io/P1N2O/pen/pyBNzX
+background ^ */
+
+
+#backgroundwrapper {
+  /* background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, var(--color-palette-black) 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, var(--color-palette-black) 10px, rgba(96, 16, 48, 0) 11px), none; */
+  background-size: 20px 20px;
+  height: 100%;
+}
+
+
+/* Main Grid Setup */
+#mainGrid {
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(5 1fr);
+  grid-template-rows: repeat(4 1fr);
+}
+
+#mainGrid > div {
+  padding: 20px;
+}
+
+#bookmarkSection {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  margin: 10px;
+  /* border: 3px solid var(--color-palette-red); */
+  /* background-color: var(--color-palette-red); */
+}
+
+#widgetsection {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  margin: 10px;
+  /* border: 3px solid var(--color-palette-green); */
+  /* background-color: var(--color-palette-orange); */
+}
+
+#searchSection {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin: 10px;
+  /* border: 3px solid var(--color-palette-orange); */
+  /* background-color: var(--color-palette-green); */
+}
+
+
+
+
+
+/* bookmark grid setup */
+#bookmarkgrid {
+  display: grid;
+  grid-template-columns: repeat(12 1fr);
+  grid-template-rows: repeat(8 1fr);
+  height: 90%;
+  margin-top: 10px;
+}
+
+#bookmarkgrid > div {
+  margin: 10px;
+}
+
+#schoolbookmarks {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 3; 
+}
+
+#workbookmarks {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 5; 
+}
+
+#entertainmentbookmarks {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 5; 
+}
+
+#miscbookmarks {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 9; 
+}
+
+#morebookmarks {
+  grid-column-start: 5;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 9;
+  background-image: url('https://64.media.tumblr.com/bc15aa5e7af9b2c8b650dc4af55f4f8b/7881ba13fb70e3b9-e9/s1280x1920/3179609ecbba5f93bda0f8c89367de90b6a2b65c.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 80%;
+  border-radius: 20px;
+}
+
+/* potential gifs
+
+https://cdnb.artstation.com/p/assets/images/images/018/499/217/original/pixel-jeff-blade-runner-v2.gif?1559616031
+
+*/
+
+
+
+/* bookmark list formatting */
+.bookmarklist {
+  list-style: none;
+}
+
+.bookmarklist > li {
+  display: flex;
+  align-items: center;
+}
+
+.threecols {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+.twocols {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+
+
+
+
+/* widgets */
+.widgetcontainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}
+
+.widget{
+  height: 40%;
+}
+
+
+
+/* board formatting */
+.board {
+  padding: 10px;
+  border-radius: 10px;
+
+  
+  /* box-shadow:  #2a6869 5px 5px var(--blur-amount); */
+  background: linear-gradient(45deg, var(--color-tertiary) 0%, var(--color-primary) 100%);
+  box-shadow: var(--color-box-unfaded) 5px 5px var(--blur-amount);
+}
+
+
+.board:hover {
+  animation-name: preshadowanim, shadowanim;
+  animation-delay: 0s, 1s;
+  animation-duration: 1s, 4s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: linear, linear;
+}
+/* https://codepen.io/corvus-007/pen/bGbgPWe
+for gradient ^
+
+
+
+
+/* search bar section */
+#searchWrapper {
+  margin-top: 20px;
+  padding: 10px;
+
+  border: solid 3px var(--color-text-light);
+  border-radius: 50px;
+}
+
+#searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#searchForm > input {
+  width: 80%;
+  padding: 10px;  
+  border: none;
+  /* border-bottom: solid 2px white; */
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color-text-light);
+  font-size: 25px;
+} 
+
+#searchForm > input:focus {
+  outline: none;
+}
+
+
+#searchOptionWrapper {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
+
+#searchOptionWrapper > button {
+  padding: 10px;
+ 
+  border: none;
+  border-radius: 5px;
+  background: var(--color-tertiary);
+  color: var(--color-text-light);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#searchOptionWrapper > button#highlightedButton {
+  background: var(--color-highlight);
+}
+
+
+/* text formatting */
+h1 {
+  margin-bottom: 4px;
+  color: var(--color-text-light);
+}
+
+h3 {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+hr {
+  width: 70%;
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+.bookmarkicon {
+  font-size: 50px;
+  color: var(--color-text-light);
+}
+
+.bookmarktext {
+  margin-left: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--color-text-light);
+}
+
+.gif > div {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#date {
+  padding-right: 40px;
+  font-size: 40px;
+  cursor: default;
+  color: var(--color-bg);
+}
+
+
+
+/* animations */
+@keyframes preshadowanim {
+  0%      {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-bg-darkererer) 0px 0px var(--blur-amount),       var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-box-unfaded) 5px 5px var(--blur-amount)}
+  100%    {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-bg-darkererer) 0px 0px var(--blur-amount),       var(--color-bg-darkererer) 5px 5px var(--blur-amount),   var(--color-box-unfaded) 10px 10px var(--blur-amount)}
+}
+
+@keyframes shadowanim {
+  0%    {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-bg-darkererer) 0px 0px var(--blur-amount),       var(--color-bg-darkererer) 5px 5px var(--blur-amount),   var(--color-box-unfaded) 10px 10px var(--blur-amount)}
+  25%   {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-bg-darkererer) 0px 0px var(--blur-amount),       var(--color-bg-darkererer) 10px 10px var(--blur-amount),   var(--color-box-unfaded) 15px 15px var(--blur-amount)}
+  50%   {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-box-unfaded) 5px 5px var(--blur-amount),    var(--color-bg-darkererer) 15px 15px var(--blur-amount),   var(--color-box-faded) 20px 20px var(--blur-amount)}
+  100%  {box-shadow:  var(--color-bg-darkererer) 5px 5px var(--blur-amount),   var(--color-box-unfaded) 10px 10px var(--blur-amount),   var(--color-bg-darkererer) 20px 20px var(--blur-amount),   var(--color-box-gone) 25px 25px var(--blur-amount)}
+}
+
+
+/* clock stuff */
+.clock {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.hour {
+  position: absolute;
+  height: 100px;
+  width: 6px;
+  top: 0%;
+  left: 48.5%;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+  z-index: 1;
+
+  background: var(--color-bg);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.minute {
+  position: absolute;
+  height: 120px;
+  width: 4px;
+  top: -10%;
+  left: 49%;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom center;
+  
+  background: var(--color-bg);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.second {
+  position: absolute;
+  height: 70px;
+  width: 2px;
+  top: 15%;
+  left: 49.5%;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom center;
+  z-index: 1;
+
+  border-radius: 4px;
+  background: var(--color-highlight);
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  background: var(--color-text-light);
+  border-radius: 100px;
+  margin: auto;
+  z-index: 1;
+}
+
+
+
+.clock_indicator {
+  position: absolute;
+  height: 140px;
+
+  width: 4px;
+  top: -20%;
+  left: 49%;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom center;
+  
+  background: rgb(0,0,0,0);
+}
+
+.clock_indicator.large {
+  border-top: solid 8px var(--color-bg);
+}
+
+/* 
+.clock_indicator.small {
+  border-top: solid 8px var(--color-bg);
+  
+} */

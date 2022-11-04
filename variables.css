@@ -1,0 +1,67 @@
+:root {
+  /** colors */
+  --color-name: nord;
+  --color-bg-shade: #252A33;
+  --color-bg-base: #2E3440;
+  --color-bg-surface: #373E4D;
+  --color-bg-highlight: #40495A;
+  --color-fg-shade: #768CB2;
+  --color-fg-base: #A6B4CD;
+  --color-fg-surface: #D6DCE8;
+  --color-fg-highlight: #FFFFFF;
+  --color-primary-bg: #2C4948;
+  --color-primary-base: #579190;
+  --color-primary-fg: #9AC2C2;
+  --color-secondary-bg: #25394C;
+  --color-secondary-base: #4A7197;
+  --color-secondary-fg: #8BA9C6;
+  --color-palette-red: #BF616A;
+  --color-palette-green: #A3BE8C;
+  --color-palette-yellow: #EBCB8B;
+  --color-palette-blue: #5E81AC;
+  --color-palette-purple: #B48EAD;
+  --color-palette-cyan: #88C0D0;
+  --color-palette-orange: #D08770;
+  --color-palette-black: #000000;
+  
+
+  /* new color pallete 
+    to match with: https://64.media.tumblr.com/bc15aa5e7af9b2c8b650dc4af55f4f8b/7881ba13fb70e3b9-e9/s1280x1920/3179609ecbba5f93bda0f8c89367de90b6a2b65c.gif
+  */
+  --color-bg: #161F4D;
+  --color-bg-darker: #0f1536;
+  --color-bg-darkerer: #090d21;
+  --color-bg-darkererer: #04060f;
+  --color-highlight: #C55059;
+  --color-primary: #FFD1A3;
+  --color-secondary: #D29864;
+  --color-tertiary: #5D4251;
+  --color-text-light: #FEECFC;
+  --color-box-unfaded: rgb(254, 236, 252, 1);
+  --color-box-faded: rgb(254, 236, 252, 0.5);
+  --color-box-gone: rgb(254, 236, 252, 0);
+
+
+  /** general */
+  --font-family: Quicksand;
+  --display-image: block;
+  --blur-amount: 2.5px;
+  --border-width: 3px;
+
+  /** surface */
+  --surface-maxWidth: 1000px;
+  --surface-shadow: 12px 12px 0px rgb(44, 73, 72);
+  /* --surface-shadow: 12px 12px 0px rgb(44, 73, 72), 24px 24px 0px rgb(42.25, 69, 73), 36px 36px 0px rgb(40.5, 65, 74), 48px 48px 0px rgb(38.75, 61, 75), 60px 60px 0px rgb(37, 57, 76); */
+  --surface-borderRadius: 20px;
+
+  /** spacing */
+  --space-smallest: 0.125rem;
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 1.5rem;
+  --space-largest: 3rem;
+
+  /** others */
+  --picture-size: 400px;
+  --group-count: 4;
+}
