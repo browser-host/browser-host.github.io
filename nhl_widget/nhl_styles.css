@@ -1,0 +1,119 @@
+@import url("./nhl_variables.css");
+
+
+body {
+  font-family: var(--font-family), sans-serif;
+}
+
+
+
+/* * * * * * * * * * *
+        lines
+* * * * * * * * * * */
+.vl {
+  border-left: 2px solid var(--color-highlight);
+}
+
+hr {
+  color: var(--color-highlight);
+}
+
+
+
+/* * * * * * * * * * *
+        scoreboard
+* * * * * * * * * * */
+
+#scoreboard{
+  height: 100%;
+  /* border: 2px solid var(--color-palette-green); */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  width: 45%;
+  /* border: 2px solid var(--color-palette-red); */
+}
+
+
+
+/* * * * * * * * * * *
+      game grids
+* * * * * * * * * * */
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  grid-template-rows: repeat(2 1fr);
+}
+
+.gameGrid > div {
+  margin: auto;
+}
+
+/* first row */
+.homeTitle {
+  grid-column: 1;
+  grid-row: 1;
+}
+.versus {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.awayTitle {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* second row */
+.homeScore {
+  grid-column: 1;
+  grid-row: 2;
+}
+.time {
+  grid-column: 2;
+  grid-row: 2;
+}
+.awayScore {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+
+/* #bookmarkgrid {
+  display: grid;
+  grid-template-columns: repeat(12 1fr);
+  grid-template-rows: repeat(8 1fr);
+  height: 90%;
+  margin-top: 10px;
+} */
+
+
+
+
+
+/* margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%; */
+
+
+
+/* * * * * * * * * * *
+        text
+* * * * * * * * * * */
+h3 {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+h4 {
+  margin: 0;
+  color: var(--color-text-light);
+}

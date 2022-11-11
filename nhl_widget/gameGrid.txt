@@ -1,0 +1,20 @@
+<div class="gameGrid">
+    <div class="awayTitle">
+        <h3>CAR</h3>
+    </div>
+    <div class="versus">
+        <h4>vs.</h4>
+    </div>
+    <div class="homeTitle">
+        <h3>FLA</h3>
+    </div>
+    <div class="awayScore">
+        <h3>0</h3>
+    </div>
+    <div class="time">
+        <h4>F</h4>
+    </div>
+    <div class="homeScore">
+        <h3>3</h3>
+    </div>
+</div>

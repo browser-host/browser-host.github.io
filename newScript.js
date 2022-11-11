@@ -1,10 +1,17 @@
+// TO DOs
+
+// add more bookmarks
+// - fantrax      -fb marketplace     -soap2day
 
 
+// space out bookmarks and make smaller
 
-// make list of bookmarks
-// to specify
-//  - link      - icon label
-//  - title     - #columns 
+
+// add hover effects for links and buttons
+// add click animatinos for buttons
+
+
+// list of bookmarks
 const bookmarks = [
   // school bookmarks
   {
@@ -28,8 +35,18 @@ const bookmarks = [
         'icon':   'cloud'
       },
       {
-        'label':  'onedrive',
+        'label':  'gmail',
         'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
+        'icon':   'cloud'
+      },
+      {
+        'label':  'gdrive',
+        'link':   'https://drive.google.com/drive/u/0/my-drive',
+        'icon':   'cloud'
+      },
+      {
+        'label':  'ffe',
+        'link':   'https://freefrontend.com/',
         'icon':   'cloud'
       },
     ]
@@ -66,7 +83,16 @@ const bookmarks = [
         'link':   'https://www.primevideo.com/hp/video/offers/nonprimehomepage/ref=dv_web_force_root?_encoding=UTF8&dvah=nonprimehomepage',
         'icon':   'play_circle'
       },
-
+      {
+        'label':  'reddit',
+        'link':   'https://www.reddit.com/',
+        'icon':   'play_circle'
+      },
+      {
+        'label':  'fantrax',
+        'link':   'https://www.fantrax.com/fantasy/league/lx1p8w7ml782vjf4/home',
+        'icon':   'play_circle'
+      },
       
     ]
   },
@@ -77,71 +103,12 @@ const bookmarks = [
     'columns': 2,
     'bookmarks': [
       {
-        //LABEL - LINK - ICON
-        'label':  'courselink',
-        'link':   'https://courselink.uoguelph.ca/d2l/home',
-        'icon':   'library_books'
-      },
-      {
-        'label':  'outlook',
-        'link':   'https://outlook.office.com/mail/',
-        'icon':   'inbox'
-      },
-      {
-        'label':  'onedrive',
-        'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
+        'label':  'discord',
+        'link':   'https://discord.com/channels/@me',
         'icon':   'cloud'
       },
     ]
   },
-
-  // more bookmarks
-  // {
-  //   'title': 'more',
-  //   'columns': 3,
-  //   'bookmarks': [
-  //     {
-  //       //LABEL - LINK - ICON
-  //       'label':  'courselink',
-  //       'link':   'https://courselink.uoguelph.ca/d2l/home',
-  //       'icon':   'library_books'
-  //     },
-  //     {
-  //       'label':  'outlook',
-  //       'link':   'https://outlook.office.com/mail/',
-  //       'icon':   'inbox'
-  //     },
-  //     {
-  //       'label':  'onedrive',
-  //       'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
-  //       'icon':   'cloud'
-  //     },
-  //   ]
-  // },
-
-  // misc bookmarks
-  // {
-  //   'title': 'misc',
-  //   'columns': 1,
-  //   'bookmarks': [
-  //     {
-  //       //LABEL - LINK - ICON
-  //       'label':  'courselink',
-  //       'link':   'https://courselink.uoguelph.ca/d2l/home',
-  //       'icon':   'library_books'
-  //     },
-  //     {
-  //       'label':  'outlook',
-  //       'link':   'https://outlook.office.com/mail/',
-  //       'icon':   'inbox'
-  //     },
-  //     {
-  //       'label':  'onedrive',
-  //       'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
-  //       'icon':   'cloud'
-  //     },
-  //   ]
-  // },
 ];
 
 
@@ -152,12 +119,10 @@ const bookmarks = [
 createListItem = ({label, link, icon}) => {
   const listItem = document.createElement("li")
 
-
   // create span
   const iconSpan = document.createElement("span")
   iconSpan.className = "material-symbols-outlined bookmarkicon"
   iconSpan.innerHTML = icon
-
 
   // create link
   const linkRef = document.createElement("a")
@@ -210,7 +175,6 @@ placeBookmarks();
 
 
 function createIndicator( tick_n ){
-
   const indicator = document.createElement("div")
 
   // 5 min indicators
@@ -219,12 +183,7 @@ function createIndicator( tick_n ){
     indicator.style.transform = `rotate(${30*tick_n}deg)`
 
   }
-    // minute indicators
-  // } else {
-  //   indicator.className = "clock_indicator small"
-  //   indicator.style.transform = `rotate(${6*tick_n}deg)`
-  // }
-
+ 
   return indicator;
 }
 
@@ -291,19 +250,12 @@ date();
 // search handling
 
 // search engines
-const engines = {"google":"https://www.google.com/search?q=", "duckduckgo":"", "youtube":"https://www.youtube.com/results?q=", "bing":""};
+const engines = {"google":"https://www.google.com/search?q=", "duckduckgo":"https://duckduckgo.com/?q=", "youtube":"https://www.youtube.com/results?q=", "scholar":"https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q="}
 
 // custom shortform searches
-const lookup = {"imdb":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/"}
-
-const engineUrls = {
-  deepl: "https://www.deepl.com/translator#-/-/",
-  duckduckgo: "https://duckduckgo.com/?q=",
-  ecosia: "https://www.ecosia.org/search?q=",
-  google: "https://www.google.com/search?q=",
-  startpage: "https://www.startpage.com/search?q=",
-  youtube: "https://www.youtube.com/results?q=",
-}
+const lookup = {"imdb":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/", "nhl":"https://www.google.com/search?client=firefox-b-d&q=nhl+", 
+                "tunes":"https://www.youtube.com/playlist?list=PL9Om1_yOEPtgBu5JpxiEgHssbGjWCxwxJ", "goalies":"https://www.dailyfaceoff.com/starting-goalies/",
+                }
 
 
 // search functionality
@@ -328,10 +280,11 @@ function getTargetUrl(value, engine){
   return engines[engine] + value
 }
 
-const search = () => {
+function search(ctrl){
   // get searchword
   const searchWord = document.getElementById('searchWord').value;
 
+  // check for no input
   if ( !(searchWord == "" || searchWord == null) ){
     // get selected search engine
     const highButton = document.getElementById("highlightedButton");
@@ -341,7 +294,11 @@ const search = () => {
     const targetUrl = getTargetUrl(searchWord, searchEngine);
 
     // navigate to new search
-    window.open(targetUrl, "_self")
+    if(ctrl){
+      window.open(targetUrl, "_blank")
+    } else {
+      window.open(targetUrl, "_self")
+    }
   }
 }
 
@@ -354,14 +311,12 @@ searchButton.onclick = search;
 const searchBar = document.getElementById('searchWord');
 searchBar.onkeyup = (event) => {
   if( event.key === "Enter" ){
-    search();
+    search(event.ctrlKey);
   }
 }
 
 
-
 // get all the buttons
-
 // set listener for every button
 const buttons = document.getElementsByClassName('engineButton');
 for(let i = 0; i < buttons.length; i++){
@@ -377,5 +332,22 @@ function highlight(event) {
   }
   event.target.setAttribute('id', 'highlightedButton');
 
-  search();
+  search(event.ctrlKey);
 }
+
+
+
+// add widgets
+const loadWidgets = () => {
+
+  // get location
+  const widget1 = document.getElementById('widget1');
+
+  // find selected
+
+  
+
+}
+
+
+loadWidgets();

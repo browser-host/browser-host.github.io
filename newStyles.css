@@ -2,7 +2,9 @@
 
 
 
-/* General formatting */
+/* * * * * * * * * * *
+  General formatting 
+* * * * * * * * * * */
 html {
   height: 100%;
   overflow: hidden;
@@ -32,7 +34,13 @@ background ^ */
 }
 
 
-/* Main Grid Setup */
+
+
+
+
+/* * * * * * * * * * *
+    Main Grid Setup 
+* * * * * * * * * * */
 #mainGrid {
   height: 90%;
   display: grid;
@@ -59,7 +67,7 @@ background ^ */
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 4;
-  margin: 10px;
+  /* margin: 10px; */
   /* border: 3px solid var(--color-palette-green); */
   /* background-color: var(--color-palette-orange); */
 }
@@ -78,7 +86,12 @@ background ^ */
 
 
 
-/* bookmark grid setup */
+
+
+
+/* * * * * * * * * * *
+  bookmark grid setup 
+* * * * * * * * * * */
 #bookmarkgrid {
   display: grid;
   grid-template-columns: repeat(12 1fr);
@@ -139,7 +152,12 @@ https://cdnb.artstation.com/p/assets/images/images/018/499/217/original/pixel-je
 
 
 
-/* bookmark list formatting */
+
+
+
+/* * * * * * * * * * *
+bookmark list formatting 
+* * * * * * * * * * */
 .bookmarklist {
   list-style: none;
 }
@@ -165,7 +183,11 @@ https://cdnb.artstation.com/p/assets/images/images/018/499/217/original/pixel-je
 
 
 
-/* widgets */
+
+
+/* * * * * * * * * * *
+        widgets 
+* * * * * * * * * * */
 .widgetcontainer {
   margin-top: 20px;
   display: flex;
@@ -175,12 +197,17 @@ https://cdnb.artstation.com/p/assets/images/images/018/499/217/original/pixel-je
 }
 
 .widget{
-  height: 40%;
+  height: 90%;
 }
 
 
 
-/* board formatting */
+
+
+
+/* * * * * * * * * * *
+   board formatting
+* * * * * * * * * * */
 .board {
   padding: 10px;
   border-radius: 10px;
@@ -202,10 +229,25 @@ https://cdnb.artstation.com/p/assets/images/images/018/499/217/original/pixel-je
 /* https://codepen.io/corvus-007/pen/bGbgPWe
 for gradient ^
 
+*/
 
 
 
-/* search bar section */
+
+/* * * * * * * * * * *
+        iframes
+* * * * * * * * * * */
+.widgetFrame{
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+
+
+/* * * * * * * * * * *
+  search bar section
+* * * * * * * * * * */
 #searchWrapper {
   margin-top: 20px;
   padding: 10px;
@@ -265,7 +307,12 @@ for gradient ^
 }
 
 
-/* text formatting */
+
+
+
+/* * * * * * * * * * *
+    text formatting
+* * * * * * * * * * */
 h1 {
   margin-bottom: 4px;
   color: var(--color-text-light);
@@ -311,7 +358,13 @@ hr {
 
 
 
-/* animations */
+
+
+
+
+/* * * * * * * * * * *
+      animations
+* * * * * * * * * * */
 @keyframes preshadowanim {
   0%      {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-bg-darkererer) 0px 0px var(--blur-amount),       var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-box-unfaded) 5px 5px var(--blur-amount)}
   100%    {box-shadow:  var(--color-bg-darkererer) 0px 0px var(--blur-amount),   var(--color-bg-darkererer) 0px 0px var(--blur-amount),       var(--color-bg-darkererer) 5px 5px var(--blur-amount),   var(--color-box-unfaded) 10px 10px var(--blur-amount)}
@@ -325,7 +378,9 @@ hr {
 }
 
 
-/* clock stuff */
+/* * * * * * * * * * *
+      clock stuff
+* * * * * * * * * * */
 .clock {
   height: 100%;
   width: 100%;
@@ -403,11 +458,9 @@ hr {
 }
 
 
-
 .clock_indicator {
   position: absolute;
   height: 140px;
-
   width: 4px;
   top: -20%;
   left: 49%;
