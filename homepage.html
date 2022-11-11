@@ -5,92 +5,79 @@
     <link rel="icon" href="./favicon.ico" />
     <link href="./homepageStyles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    
+    <script src="https://kit.fontawesome.com/c0c53fd3cc.js" crossorigin="anonymous"></script>
 
     <title>New tab</title>
   </head>
   <body>
     <div id="backgroundwrapper">
 
-      <div id="mainGrid">
+      <div id="mainContent">
 
-        <div id="bookmarkSection">
-          <h1>bookmarks</h1>
-          <hr>
+        <div id="headerSection">
 
-          <div id="bookmarkgrid">
-            <div id="schoolbookmarks" class="board">
-              <h3>School</h3>
+          <div id="headerWrapper">
+            <div id="timeWrapper">
+              <h1 id="timeHour" class="headerText"></h1>
+              <h1 id="timeMinute" class="headerText"></h1>
+              <h1 id="timeSecond" class="headerText"></h1>
             </div>
-
-            <div id="workbookmarks" class="board">
-              <h3>Work</h3>
-            </div>
-
-            <div id="entertainmentbookmarks" class="board">
-              <h3>Entertainment</h3>
-            </div>
-            
-            <div id="miscbookmarks" class="board">
-              <div class="clock">
-                <div class="wrap">
-                  <span class="hour"></span>
-                  <span class="minute"></span>
-                  <span class="second"></span>
-                  <span class="dot"></span>
-                  <div id="indicators">
-                    <div class="clock_indicator"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="morebookmarks" class="gif">
-              <div>
-                <h3 id="date"></h3>
-              </div>
-            
+  
+            <div id="dateWrapper">
+              <h1 id="dateDay" class="headerText"></h1>
+              <h1 id="dateMonth" class="headerText"></h1>
+              <h1 id="dateDate" class="headerText"></h1>
             </div>
           </div>
+
         </div>
 
-        <div id="widgetsection">
-          <h1>widgets</h1>
-          <hr>
-          
-          <div class="widgetcontainer">
-            <div class="board widget">
-              <h3>board2</h3>
-            </div>
-          
-            <div class="board widget">
-              <h3>board3</h3>
-            </div>
-          </div>
-        </div>
 
         <div id="searchSection">
-          <h1>search</h1>
-          <hr>
           <div id="searchWrapper">
             <form id="searchForm" action="/search">
               <input type="text" id="searchWord">
-              <span class="material-symbols-outlined bookmarkicon" id="searchButton">search</span>
+              <span class="bookmarkIcon" id="searchButton"> 
+                <i class="fa-solid fa-search"></i>
+              </span>
             </form>
-            
           </div>
-
           <div id="searchOptionWrapper">
             <button class="engineButton"  id="highlightedButton">google</button>
             <button class="engineButton" >duckduckgo</button>
             <button class="engineButton" >youtube</button>
             <button class="engineButton" >bing</button>
           </div>
-
         </div>
+
+        <div id="emptySpace"></div>
+
+
+        <h3 id="footerMenu">0  0  0  0</h3>
+
+        
       </div>
+      
+      <div id="bookmarkSection">
+
+        <div id="bookmarkDivider">
+
+          <!-- an example bookmark -->
+          <!-- <div class="bookmarkContainer">
+            <a href="https://www.youtube.com" class="bookmarkLink">
+              <span class="bookmarkIcon"> 
+                <i class="fa-solid fa-circle-play"></i>
+              </span>
+              <h3 class="bookmarkLabel">prime video</h3>
+            </a>
+          </div> -->
+          
+        </div>
+
+      </div>
+
     </div>
 
-  </body>
+    </body>
   <script type="text/javascript" src="./homepageScript.js"></script>
 </html>

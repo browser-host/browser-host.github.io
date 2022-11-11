@@ -11,13 +11,13 @@ html {
 }
 
 body {
-  /* background-color: var(--color-bg-base);   */
+  background-color: var(--color-bg-base);  
   height: 100%;
   width: 100%;
   margin: auto;
   font-family: var(--font-family), sans-serif;
 
-  background: linear-gradient(90deg, var(--color-bg-darkererer) 0%, var(--color-bg-darkerer) 75%);
+  /* background: linear-gradient(90deg, var(--color-bg-darkererer) 0%, var(--color-bg-darkerer) 75%); */
 }
 
 /* https://codepen.io/stephaniewalter/pen/xxVgReM
@@ -43,16 +43,14 @@ background ^ */
 #mainGrid > div {
   padding: 20px;
 }
-
+/* 
 #bookmarkSection {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 5;
   margin: 10px;
-  /* border: 3px solid var(--color-palette-red); */
-  /* background-color: var(--color-palette-red); */
-}
+} */
 
 #widgetsection {
   grid-column-start: 4;
@@ -63,16 +61,14 @@ background ^ */
   /* border: 3px solid var(--color-palette-green); */
   /* background-color: var(--color-palette-orange); */
 }
-
+/* 
 #searchSection {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 4;
   grid-row-end: 5;
   margin: 10px;
-  /* border: 3px solid var(--color-palette-orange); */
-  /* background-color: var(--color-palette-green); */
-}
+} */
 
 
 
@@ -282,10 +278,10 @@ hr {
   color: var(--color-text-light);
 }
 
-.bookmarkicon {
+/* .bookmarkicon {
   font-size: 50px;
   color: var(--color-text-light);
-}
+} */
 
 .bookmarktext {
   margin-left: 10px;
@@ -302,12 +298,13 @@ hr {
   align-items: center;
 }
 
+/*
 #date {
   padding-right: 40px;
   font-size: 40px;
   cursor: default;
   color: var(--color-bg);
-}
+} */
 
 
 
@@ -402,8 +399,6 @@ hr {
   z-index: 1;
 }
 
-
-
 .clock_indicator {
   position: absolute;
   height: 140px;
@@ -427,3 +422,164 @@ hr {
   border-top: solid 8px var(--color-bg);
   
 } */
+
+
+
+
+
+/*  * * * * * * * * * * *
+      Revamp stuff
+* * * * * * * * * * * */
+
+#mainContent {
+  height: 100%;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#searchSection {
+  /* height: 30%; */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+#bookmarkSection {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#bookmarkDivider {
+  width: 25%;
+  height: 90%;
+  /* background: var(--color-primary); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 20px;
+
+  border-right: solid 6px var(--color-highlight);
+  
+
+  transition: width 0.5s, padding 0.5s;
+}
+
+#bookmarkDivider:hover {
+  padding-left: 10px;
+  width: 100%;
+}
+
+#bookmarkDivider:hover .bookmarkLabel {
+  opacity: 1;
+  transition-delay: 0;
+}
+
+
+
+#emptySpace {
+  flex-grow: 1;
+}
+
+#footerMenu {
+  margin: auto;
+}
+
+.bookmarkIcon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+
+
+.bookmarkContainer {
+  padding-top: 10px;
+}
+
+.bookmarkLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bookmarkLabel {
+  padding-left: 10px;
+  width: 125px;
+  opacity: 0;
+  transition: 0.2s;
+  position: absolute;
+  left: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* date and time */
+
+#headerSection {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.headerText {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#timeHour {
+  font-size: 140px;
+  left: -80px;
+  text-shadow: 4px 6px var(--color-highlight);
+}
+#timeMinute {
+  font-size: 160px;
+  top: -20px;
+  text-shadow: -5px 3px var(--color-highlight);
+}
+#timeSecond {
+  font-size: 60px;
+  left: -40px;
+  top: -45px;
+  text-shadow: 4px -6px var(--color-highlight);
+}
+
+
+#dateDay {
+  font-size: 140px;
+  left: -20px;
+  text-shadow: -5px 3px var(--color-highlight);
+}
+#dateMonth {
+  font-size: 60px;
+  left: -60px;
+  top: -20px;
+  text-shadow: 4px -6px var(--color-highlight);
+}
+#dateDate {
+  font-size: 160px;
+  left: 60px;
+  top: -50px;
+  text-shadow: 4px 6px var(--color-highlight);
+}
