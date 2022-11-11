@@ -22,6 +22,6 @@ New layout is going to look something like this: (made with MS paint btw)
 ![image](https://user-images.githubusercontent.com/92818054/201262890-02bbdbd6-900a-449b-b2bd-7fe6512d36f7.png)
 - the bar on the left will be bookmarks and will be a drawer that expands on hover to see title of bookmarks
 - the bar on the bottom will be for widgets that will appear underneat the search bar only once the widget's corresponding button is press
-
+- this layout can be found in branch v2
 
 If you feel like suggesting anything or doing anything with the code be my geust, I can't stop ya
