@@ -7,10 +7,11 @@
   // add animations to search engine buttons
 
 // funcitonality
-  // fix stuff
   // add widgets
   // clean up code
   // export data to different file
+  // highlight the search bar when user presses '/'
+  // clear the search bar on enter
 
 
 // // make list of bookmarks
@@ -256,9 +257,13 @@ function time(){
   const minutes = d.getMinutes();
   const seconds = d.getSeconds();
 
+  const minutesPadded = (minutes + "").padStart(2, "0");
+  const secondsPadded = (seconds + "").padStart(2, "0");
+
+
   document.getElementById('timeHour').innerHTML = hours;
-  document.getElementById('timeMinute').innerHTML = minutes;
-  document.getElementById('timeSecond').innerHTML = seconds;
+  document.getElementById('timeMinute').innerHTML = minutesPadded;
+  document.getElementById('timeSecond').innerHTML = secondsPadded;
 }
 
 var inc = 100;
@@ -268,19 +273,12 @@ setInterval(time, inc);
 // search handling
 
 // search engines
-const engines = {"google":"https://www.google.com/search?q=", "duckduckgo":"", "youtube":"https://www.youtube.com/results?q=", "bing":""};
+const engines = {"google":"https://www.google.com/search?q=", "duckduckgo":"https://duckduckgo.com/?q=", "youtube":"https://www.youtube.com/results?q=", "scholar":"https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q="}
 
 // custom shortform searches
-const lookup = {"imdb":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/"}
-
-const engineUrls = {
-  deepl: "https://www.deepl.com/translator#-/-/",
-  duckduckgo: "https://duckduckgo.com/?q=",
-  ecosia: "https://www.ecosia.org/search?q=",
-  google: "https://www.google.com/search?q=",
-  startpage: "https://www.startpage.com/search?q=",
-  youtube: "https://www.youtube.com/results?q=",
-}
+const lookup = {"imdb":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/", "nhl":"https://www.google.com/search?client=firefox-b-d&q=nhl+", 
+                "tunes":"https://www.youtube.com/playlist?list=PL9Om1_yOEPtgBu5JpxiEgHssbGjWCxwxJ", "goalies":"https://www.dailyfaceoff.com/starting-goalies/",
+                }
 
 
 // search functionality
@@ -305,10 +303,11 @@ function getTargetUrl(value, engine){
   return engines[engine] + value
 }
 
-const search = () => {
+function search(ctrl){
   // get searchword
   const searchWord = document.getElementById('searchWord').value;
 
+  // check for no input
   if ( !(searchWord == "" || searchWord == null) ){
     // get selected search engine
     const highButton = document.getElementById("highlightedButton");
@@ -318,7 +317,11 @@ const search = () => {
     const targetUrl = getTargetUrl(searchWord, searchEngine);
 
     // navigate to new search
-    window.open(targetUrl, "_self")
+    if(ctrl){
+      window.open(targetUrl, "_blank")
+    } else {
+      window.open(targetUrl, "_self")
+    }
   }
 }
 
@@ -331,7 +334,7 @@ searchButton.onclick = search;
 const searchBar = document.getElementById('searchWord');
 searchBar.onkeyup = (event) => {
   if( event.key === "Enter" ){
-    search();
+    search(event.ctrlKey);
   }
 }
 
@@ -354,9 +357,8 @@ function highlight(event) {
   }
   event.target.setAttribute('id', 'highlightedButton');
 
-  search();
+  search(event.ctrlKey);
 }
-
 
 
 
@@ -371,42 +373,72 @@ const bookmarkData = [
     //LABEL - LINK - ICON
     'label':  'courselink',
     'link':   'https://courselink.uoguelph.ca/d2l/home',
-    'icon':   'fa-book-open'
+    'icon':   'fa-solid fa-book-open'
   },
   {
     'label':  'outlook',
     'link':   'https://outlook.office.com/mail/',
-    'icon':   'fa-inbox'
+    'icon':   'fa-solid fa-inbox'
   },
   {
     'label':  'onedrive',
     'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
-    'icon':   'fa-cloud'
+    'icon':   'fa-solid fa-cloud'
   },
   {
     'label':  'youtube',
     'link':   'https://www.youtube.com/',
-    'icon':   'fa-youtube'
+    'icon':   'fa-brands fa-youtube'
   },
   {
     'label':  'netflix',
     'link':   'https://www.netflix.com/ca/',
-    'icon':   'fa-n'
+    'icon':   'fa-solid fa-n'
   },
   {
     'label':  'sportsnet',
     'link':   'https://watch.sportsnet.ca/',
-    'icon':   'fa-hockey-puck'
+    'icon':   'fa-solid fa-hockey-puck'
   },
   {
     'label':  'disney+',
     'link':   'https://www.disneyplus.com/en-ca',
-    'icon':   'fa-plus'
+    'icon':   'fa-solid fa-plus'
   },
   {
     'label':  'prime video',
     'link':   'https://www.primevideo.com/hp/video/offers/nonprimehomepage/ref=dv_web_force_root?_encoding=UTF8&dvah=nonprimehomepage',
-    'icon':   'fa-circle-play'
+    'icon':   'fa-solid fa-circle-play'
+  },
+  {
+    'label':  'gmail',
+    'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
+    'icon':   'fa-solid fa-envelope'
+  },
+  {
+    'label':  'gdrive',
+    'link':   'https://drive.google.com/drive/u/0/my-drive',
+    'icon':   'fa-brands fa-google-drive'
+  },
+  {
+    'label':  'ffe',
+    'link':   'https://freefrontend.com/',
+    'icon':   'fa-brands fa-css3'
+  },
+  {
+    'label':  'reddit',
+    'link':   'https://www.reddit.com/',
+    'icon':   'fa-brands fa-reddit'
+  },
+  {
+    'label':  'fantrax',
+    'link':   'https://www.fantrax.com/fantasy/league/lx1p8w7ml782vjf4/home',
+    'icon':   'fa-brands fa-fantasy-flight-games'
+  },
+  {
+    'label':  'discord',
+    'link':   'https://discord.com/channels/@me',
+    'icon':   'fa-brands fa-discord'
   },
 ];
 
@@ -418,15 +450,9 @@ function elementFromHtml(htmlString){
 }
 
 function bookmarkToString(bookmark){
-  returnString = '<div class="bookmarkContainer"> <span class="bookmarkIcon"> <i class="fa-solid ' +
-    bookmark.icon +
-    '"></i> </span> <h3 class="bookmarkLabel">' + 
-    bookmark.label + 
-    '</h3></div>'
-
   returnString = '<div class="bookmarkContainer"><a href="' +
   bookmark.link +
-  '" class="bookmarkLink"><span class="bookmarkIcon"><i class="fa-solid ' + 
+  '" class="bookmarkLink"><span class="bookmarkIcon"><i class="' + 
   bookmark.icon +
   '"></i> </span> <h3 class="bookmarkLabel">' +
   bookmark.label +

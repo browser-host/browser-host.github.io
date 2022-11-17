@@ -51,16 +51,14 @@ background ^ */
   grid-row-end: 5;
   margin: 10px;
 } */
-
+/* 
 #widgetsection {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 4;
   margin: 10px;
-  /* border: 3px solid var(--color-palette-green); */
-  /* background-color: var(--color-palette-orange); */
-}
+} */
 /* 
 #searchSection {
   grid-column-start: 4;
@@ -169,10 +167,10 @@ https://cdnb.artstation.com/p/assets/images/images/018/499/217/original/pixel-je
   justify-content: space-between;
   height: 80%;
 }
-
+/* 
 .widget{
   height: 40%;
-}
+} */
 
 
 
@@ -257,7 +255,7 @@ for gradient ^
 }
 
 #searchOptionWrapper > button#highlightedButton {
-  background: var(--color-highlight);
+  background: var(--color-primary);
 } */
 
 
@@ -381,7 +379,7 @@ hr {
   z-index: 1;
 
   border-radius: 4px;
-  background: var(--color-highlight);
+  background: var(--color-primary);
 }
 
 .dot {
@@ -440,15 +438,21 @@ hr {
 }
 
 #searchSection {
-  /* height: 30%; */
   display: flex;
   flex-direction: column;
 }
 
+#searchButton {
+  color: var(--color-highlight);
+}
+
+#searchButton:hover {
+  text-shadow: 2px -3px var(--color-primary), -4px 1.5px var(--color-complement);
+}
 
 
 #bookmarkSection {
-  width: 200px;
+  width: 220px;
   position: absolute;
   top: 0;
   left: 0;
@@ -459,25 +463,30 @@ hr {
 }
 
 #bookmarkDivider {
-  width: 25%;
+  width: 22%;
   height: 90%;
-  /* background: var(--color-primary); */
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 20px;
-  border-right: solid 6px var(--color-highlight);
+  
   transition: width 0.5s, padding 0.5s;
+
+  background: transparent;
+  border: solid 4px var(--color-complement);
+  border-radius: 10px;
+  box-shadow: var(--color-complement) 4px 4px;
+  margin-left: 20px;
 }
 
 #bookmarkDivider:hover {
   padding-left: 10px;
-  width: 100%;
+  width: 80%;
 }
 
 #bookmarkDivider:hover .bookmarkLabel {
   opacity: 1;
-  transition-delay: 0;
+  pointer-events: all;
 }
 
 
@@ -485,13 +494,6 @@ hr {
 #emptySpace {
   flex-grow: 1;
 }
-
-#footerMenu {
-  margin: auto;
-}
-
-
-
 
 
 .bookmarkContainer {
@@ -503,10 +505,14 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: var(--color-text-light);
-}
-.bookmarkLink:hover {
   color: var(--color-highlight);
+}
+
+
+.bookmarkLink:hover .bookmarkIcon, .bookmarkLink:hover .bookmarkLabel {
+  color: transparent;
+  -webkit-text-stroke: var(--color-highlight) 1px;
+  text-shadow: 2px -3px var(--color-complement), -4px 1.5px var(--color-primary);
 }
 
 .bookmarkLabel {
@@ -515,13 +521,15 @@ hr {
   opacity: 0;
   transition: 0.2s;
   position: absolute;
-  left: 40px;
+  left: 60px;
   color: inherit;
+  pointer-events: none;
 }
 
 .bookmarkIcon {
   font-size: 1.5rem;
   color: inherit;
+  transition: 0.2s;
 }
 
 a {
@@ -550,44 +558,59 @@ a {
   position: relative;
   padding: 0;
   margin: 0;
-  /* -webkit-text-stroke: 4px black; */
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 2px var(--color-highlight);
+  text-shadow: 4px -6px var(--color-primary), -8px 3px var(--color-complement);
 }
 
 #timeHour {
   font-size: 140px;
+  top: 40px;
   left: -80px;
-  text-shadow: 4px 6px var(--color-highlight), 6px 8px black;
 }
 #timeMinute {
   font-size: 160px;
   top: -20px;
-  text-shadow: -5px 3px var(--color-highlight), 6px 8px black;
 }
 #timeSecond {
   font-size: 60px;
   left: -40px;
   top: -45px;
-  text-shadow: 4px -6px var(--color-highlight), 6px 8px black;
+  animation-name: textShadowAnim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
 }
-
 
 #dateDay {
   font-size: 140px;
   left: -20px;
-  text-shadow: -5px 3px var(--color-highlight), 6px 8px black;
 }
 #dateMonth {
   font-size: 60px;
   left: -60px;
   top: -20px;
-  text-shadow: 4px -6px var(--color-highlight), 6px 8px black;
 }
 #dateDate {
   font-size: 160px;
   left: 60px;
   top: -50px;
-  text-shadow: 4px 6px var(--color-highlight), 6px 8px black;
 }
+
+@keyframes textShadowAnim {
+  0%      { text-shadow: 4px  -6px var(--color-primary),  -8px 3px var(--color-complement); }
+  25%     { text-shadow: -4px -6px var(--color-primary),  8px 3px var(--color-complement); }
+  50%     { text-shadow: -4px 6px var(--color-complement),   8px -3px var(--color-primary); }
+  75%     { text-shadow: 4px  6px var(--color-complement),   -8px -3px var(--color-primary); }
+  100%    { text-shadow: 4px  -6px var(--color-primary),  -8px 3px var(--color-complement); }
+}
+
+
+/* animation-name: preshadowanim, shadowanim;
+animation-delay: 0s, 1s;
+animation-duration: 1s, 4s;
+animation-iteration-count: 1, infinite;
+animation-timing-function: linear, linear; */
 
 
 /* search engine stuff */
@@ -610,17 +633,23 @@ a {
   font-size: 18px;
   font-weight: bold;
   
-  border: 3px solid black;
-  border-bottom: solid 8px black;
+  border: 3px solid var(--color-complement);
+  border-bottom: solid 8px var(--color-complement);
   background:rgba(0, 0, 0, 0);
-  color: var(--color-text-light);
-  transition: 0.1s;
+  color: var(--color-highlight);
+  transition: 0.15s;
+  transition-timing-function: ease-in;
+}
+
+#searchOptionWrapper > button:hover {
+  cursor: pointer;
 }
 
 #searchOptionWrapper > button#highlightedButton {
-  background: var(--color-highlight);
-  border-bottom: solid 4px black;
-  color: var(--color-text-light);
+  background: var(--color-primary);
+  border-bottom: solid 4px var(--color-complement);
+  transition: 0.15s;
+  transition-timing-function: cubic-bezier(.17,1.76,.23,.92);
 }
 
 
@@ -629,8 +658,8 @@ a {
   margin-top: 20px;
   padding: 10px;
 
-  border: solid 3px black;
-  border-bottom: solid 6px black;
+  border: solid 3px var(--color-complement);
+  border-bottom: solid 6px var(--color-complement);
   border-radius: 50px;
 }
 
@@ -645,7 +674,7 @@ a {
   width: 80%;
   padding: 10px;  
   border: none;
-  /* border-bottom: solid 2px white; */
+  /* border-bottom: solid 2px var(--color-primary)te; */
   background-color: rgba(0, 0, 0, 0);
   color: var(--color-text-light);
   font-size: 25px;
@@ -654,3 +683,39 @@ a {
 #searchForm > input:focus {
   outline: none;
 }
+
+
+/* footer menu and widget stuff */
+
+#footerMenu {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#widgetLabel {
+  font-size: 60px;
+}
+
+#widgetLabel:hover {
+  font-size: 60px;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+#widgetSection {
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+#widgetWrapper {
+  height: 70%;
+  width: 100%;
+  border: 5px solid var(--color-complement);
+  background-color: var(--color-primary);
+}
+

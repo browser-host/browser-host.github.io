@@ -1,8 +1,17 @@
 :root {
-  /** colors */
+
+  /* currently used colors */
+  --color-bg-base: #373E4D;
+  --color-primary: #88C0D0;
+  --color-complement: #D08770;
+  --color-highlight: white;
+
+
+  /** others */
   --color-name: nord;
   --color-bg-shade: #252A33;
-  --color-bg-base: #2E3440;
+
+
   --color-bg-surface: #373E4D;
   --color-bg-highlight: #40495A;
   --color-fg-shade: #768CB2;
@@ -23,20 +32,16 @@
   --color-palette-cyan: #88C0D0;
   --color-palette-orange: #D08770;
   --color-palette-black: #000000;
-  
 
-  /* new color pallete 
-    to match with: https://64.media.tumblr.com/bc15aa5e7af9b2c8b650dc4af55f4f8b/7881ba13fb70e3b9-e9/s1280x1920/3179609ecbba5f93bda0f8c89367de90b6a2b65c.gif
-  */
+  
   --color-bg: #161F4D;
   --color-bg-darker: #0f1536;
   --color-bg-darkerer: #090d21;
   --color-bg-darkererer: #04060f;
-  --color-highlight: #C55059;
-  --color-primary: #FFD1A3;
   --color-secondary: #D29864;
   --color-tertiary: #5D4251;
-  --color-text-light: #FEECFC;
+  
+  --color-text-light: white;
   --color-box-unfaded: rgb(254, 236, 252, 1);
   --color-box-faded: rgb(254, 236, 252, 0.5);
   --color-box-gone: rgb(254, 236, 252, 0);
