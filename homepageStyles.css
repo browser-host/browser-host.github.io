@@ -1,4 +1,35 @@
-@import url("./variables.css");
+
+:root {
+
+  /* currently used colors */
+  --color-bg-base: #373E4D;
+  --color-primary: #88C0D0;
+  --color-complement: #D08770;
+  --color-highlight: white;
+
+  /** general */
+  --font-family: Quicksand;
+  --display-image: block;
+  --blur-amount: 2.5px;
+  --border-width: 3px;
+
+  /** surface */
+  --surface-maxWidth: 1000px;
+  --surface-shadow: 12px 12px 0px rgb(44, 73, 72);
+  --surface-borderRadius: 20px;
+
+  /** spacing */
+  --space-smallest: 0.125rem;
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 1.5rem;
+  --space-largest: 3rem;
+
+  /** others */
+  --picture-size: 400px;
+  --group-count: 4;
+}
+
 
 
 
