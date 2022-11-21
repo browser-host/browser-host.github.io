@@ -320,7 +320,7 @@ function search(ctrl){
     if(ctrl){
       window.open(targetUrl, "_blank")
     } else {
-      window.open(targetUrl, "_blank")
+      window.open(targetUrl, "_self")
     }
   }
 }
