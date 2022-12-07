@@ -443,32 +443,32 @@ const bookmarkData = [
   {
     'label':  'teams',
     'link':   'teams.microsoft.com/',
-    'icon':   'fa-brands fa-discord'
+    'icon':   'fa-solid fa-people-group'
   },
   {
     'label':  'github',
     'link':   'github.com/',
-    'icon':   'fa-brands fa-discord'
+    'icon':   'fa-brands fa-github'
   },
   {
     'label':  'instagram',
     'link':   'instagram.com/',
-    'icon':   'fa-brands fa-discord'
+    'icon':   'fa-brands fa-instagram'
   },
   {
     'label':  'soap2day',
     'link':   'https://soapgate.org/',
-    'icon':   'fa-brands fa-discord'
+    'icon':   'fa-solid fa-clapperboard'
   },
   {
     'label':  'thesaurus',
     'link':   'https://www.thesaurus.com/',
-    'icon':   'fa-brands fa-discord'
+    'icon':   'fa-solid fa-book'
   },
   {
     'label':  'figma',
     'link':   'https://www.figma.com',
-    'icon':   'fa-brands fa-discord'
+    'icon':   'fa-brands fa-figma'
   },
 ];
 
