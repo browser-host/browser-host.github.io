@@ -412,7 +412,7 @@ const bookmarkData = [
   },
   {
     'label':  'gmail',
-    'link':   'mail.google.com/',
+    'link':   'https://mail.google.com/',
     'icon':   'fa-solid fa-envelope'
   },
   {
