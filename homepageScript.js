@@ -442,17 +442,17 @@ const bookmarkData = [
   },
   {
     'label':  'teams',
-    'link':   'teams.microsoft.com/',
+    'link':   'https://teams.microsoft.com/',
     'icon':   'fa-solid fa-people-group'
   },
   {
     'label':  'github',
-    'link':   'github.com/',
+    'link':   'https://github.com/',
     'icon':   'fa-brands fa-github'
   },
   {
     'label':  'instagram',
-    'link':   'instagram.com/',
+    'link':   'https://www.instagram.com/',
     'icon':   'fa-brands fa-instagram'
   },
   {
