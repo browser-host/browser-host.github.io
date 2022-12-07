@@ -412,7 +412,7 @@ const bookmarkData = [
   },
   {
     'label':  'gmail',
-    'link':   'https://uoguelphca-my.sharepoint.com/personal/sharlaar_uoguelph_ca/_layouts/15/onedrive.aspx',
+    'link':   'mail.google.com/',
     'icon':   'fa-solid fa-envelope'
   },
   {
@@ -438,6 +438,36 @@ const bookmarkData = [
   {
     'label':  'discord',
     'link':   'https://discord.com/channels/@me',
+    'icon':   'fa-brands fa-discord'
+  },
+  {
+    'label':  'teams',
+    'link':   'teams.microsoft.com/',
+    'icon':   'fa-brands fa-discord'
+  },
+  {
+    'label':  'github',
+    'link':   'github.com/',
+    'icon':   'fa-brands fa-discord'
+  },
+  {
+    'label':  'instagram',
+    'link':   'instagram.com/',
+    'icon':   'fa-brands fa-discord'
+  },
+  {
+    'label':  'soap2day',
+    'link':   'https://soapgate.org/',
+    'icon':   'fa-brands fa-discord'
+  },
+  {
+    'label':  'thesaurus',
+    'link':   'https://www.thesaurus.com/',
+    'icon':   'fa-brands fa-discord'
+  },
+  {
+    'label':  'figma',
+    'link':   'https://www.figma.com',
     'icon':   'fa-brands fa-discord'
   },
 ];
